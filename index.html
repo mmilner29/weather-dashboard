@@ -4,44 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Weather Dashboard</title>
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <h1 class="text-center bg-dark text-light">Weather Dashboard</h1>
     </header>
-    <main>
+    <main class="row justify-content-start">
         <!--Search Column-->
-        <div>
+        <div class="col-3">
             <div>
                 <h2>Search for a City:</h2>
-                <form>
-                <input type="text" for="citynm">
-                <button type="submit">Submit</button>
+                <form class="form-group">
+                <input type="text" class="form-control" for="citynm" placeholder="Phoenix">
+                <button type="submit" class="btn btn-info btn-block mt-3">Submit</button>
                 </form>
             </div>
             <!--Search History-->
             <div>
-                <button type="submit">Example City</button>
-                <button type="submit">Example City</button>
-                <button type="submit">Example City</button>
+                <button type="submit" class="btn btn-secondary btn-block mt-3">Example City</button>
+                <button type="submit" class="btn btn-secondary btn-block mt-3">Example City</button>
+                <button type="submit" class="btn btn-secondary btn-block mt-3">Example City</button>
             </div>
         </div>
         <!--Display Column-->
-        <div>
+        <div class="col-9">
             <!--Today's Weather-->
-            <div>
-                <h2>Phoenix (3/30/2022) [insert icon]</h2>
-                <ul>
-                    <li>Temp:</li>
-                    <li>Wind:</li>
-                    <li>Humidity:</li>
-                    <li>UV Index:</li>
-                </ul>
+            <div class="row td-weather">
+                <div class="col-12 card">
+                    <h2>Phoenix (3/30/2022) [insert icon]</h2>
+                    <ul>
+                        <li>Temp:</li>
+                        <li>Wind:</li>
+                        <li>Humidity:</li>
+                        <li>UV Index:</li>
+                    </ul>
+                </div>
             </div>
             <!--5-Day Forecast-->
-            <div>
-                <div>
+            <div class="row justify-content-around fc-weather">
+                <div class="col-2 card bg-info text-light">
                     <h3>3/31/2022</h3>
                     <p>[insert icon]</p>
                     <ul>
@@ -50,7 +54,7 @@
                         <li>UV Index:</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-2 card bg-info text-light">
                     <h3>3/31/2022</h3>
                     <p>[insert icon]</p>
                     <ul>
@@ -59,7 +63,7 @@
                         <li>UV Index:</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-2 card bg-info text-light">
                     <h3>3/31/2022</h3>
                     <p>[insert icon]</p>
                     <ul>
@@ -68,7 +72,7 @@
                         <li>UV Index:</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-2 card bg-info text-light">
                     <h3>3/31/2022</h3>
                     <p>[insert icon]</p>
                     <ul>
@@ -77,7 +81,7 @@
                         <li>UV Index:</li>
                     </ul>
                 </div>
-                <div>
+                <div class="col-2 card bg-info text-light">
                     <h3>3/31/2022</h3>
                     <p>[insert icon]</p>
                     <ul>
