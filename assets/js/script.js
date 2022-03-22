@@ -1,6 +1,7 @@
 const submitBtn = document.querySelector("#submit-btn");
 const searchDiv = document.querySelector("#search-hist");
 const cityName = document.querySelector("#city-name");
+const weatherDiv = document.querySelector('#current-weather')
 const apiKey = '6033dc9f9b191ae2855b71b9c8996bcb';
 
 var citySearch = function(event) {
@@ -44,7 +45,13 @@ var fetchForecast = function(cityName) {
 };
 
 var displayWeather = function(response) {
-    console.log(response.main.temp);
+    console.log(response.name);
+    var cityNm = response.name
+    $("<h2></h2>").text(cityNm).appendTo(weatherDiv);
+    var ul = $("<ul></ul>").appendTo(weatherDiv);
+    $("<li></li>").text('Temp: ' + response.main.temp).appendTo(ul);
+    $("<li></li>").text('Humidity: ' + response.main.humidity).appendTo(ul);
+    $("<li></li>").text('Wind: ' + response.wind.speed).appendTo(ul);
 };
 
 var displayForecast = function(response) {
