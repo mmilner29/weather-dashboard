@@ -9,7 +9,7 @@ A website that allows users to check the weather and five day forecast based on 
 
 ## Preview
 
-[Dashboard Preview](./assets/images/preview.png)
+![Dashboard Preview](./assets/images/preview.png)
 
 ## Website
 
