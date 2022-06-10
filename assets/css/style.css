@@ -7,6 +7,10 @@ header h1 {
     margin-bottom: 20px;
 }
 
+h3 {
+    font-size: 1.6 rem;
+}
+
 .td-weather {
     margin-bottom: 20px;
 }
