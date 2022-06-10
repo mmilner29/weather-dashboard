@@ -26,7 +26,7 @@ var citySearch = function(event) {
     fetchForecast(city);
 };
 
-
+//featch weather from weather api
 
 var fetchWeather = function(cityName) {
     weatherUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&units=imperial&appid=' + apiKey;
@@ -44,7 +44,7 @@ var fetchWeather = function(cityName) {
     });
 };
 
-
+//fetch forcast from weather api
 var fetchForecast = function(cityName) {
     forecastUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&units=imperial&appid=' + apiKey;
     fetch(forecastUrl)
@@ -81,6 +81,7 @@ var fetchForecast = function(cityName) {
     });
 };
 
+//display weather on page
 var displayWeather = function(response) {
     // console.log(response.name);
         var cityNm = response.name
@@ -91,6 +92,7 @@ var displayWeather = function(response) {
         $("<li></li>").text('Wind: ' + response.wind.speed).appendTo(ul);
 };
 
+//append forecast to page
 var displayForecast = function(response) {
     // console.log(response.list[0].dt_txt);
     $("<h3></h3>").text(response.list[0].dt_txt.slice(0,10)).appendTo(cardOne);
@@ -124,6 +126,6 @@ var displayForecast = function(response) {
 };
 
 
-
+//event listener for submit btn.
 
 submitBtn.addEventListener("submit", citySearch)
